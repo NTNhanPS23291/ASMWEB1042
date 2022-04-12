@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/tonghop.css">
+    <title>Tổng hợp</title>
+</head>
+
+<body>
+    <nav class="nav-main">
+        <ul class="nav-links">
+            <div class="nav-links-main">
+                <li class="nav-link"><a class="nav-col" href="#">Trang chủ</a></li>
+                <li class="nav-link"><a class="nav-col" href="#">Giơi thiệu</a></li>
+                <li class="nav-link" id="shopping"><a class="nav-col">Mua hàng</a></li>
+                <li class="nav-link"><a class="nav-col" href="#">Đăng ký</a></li>
+                <li class="nav-link"><a class="nav-col" href="#">Hoạt động sinh viên</a></li>
+                <li class="nav-link"><a class="nav-col" href="#">Tư vấn</a></li>
+            </div>
+            <div class="search">
+                <div class="icon">
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+                <div class="input inactive">
+                    <input type="text" placeholder="Search..." id="search-bar">
+                </div>
+                <ion-icon class="clear" name="close-outline" onclick="document.getElementById('search-bar').value = ''">
+                </ion-icon>
+            </div>
+        </ul>
+        <script>
+            const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            const input = document.querySelector('.input');
+            icon.onclick = function () {
+                search.classList.toggle('active');
+                input.classList.toggle('inactive');
+
+            }
+        </script>
+    </nav>
+    <div class="gallery-containter">
+        <!-- <h3 class="heading">Album ảnh thiên nhiên bốn mùa</h3> -->
+        <div class="slide-container">
+            <div class="count-container slider-hide"></div>
+            <ion-icon class="btn slider-play" name="play-outline"></ion-icon>
+            <ion-icon class="btn slider-pause" name="pause-outline"></ion-icon>
+            <ion-icon class="btn btn-left slider-hide" name="chevron-back-outline"></ion-icon>
+            <ion-icon class="btn btn-right slider-hide" name="chevron-forward-outline"></ion-icon>
+            <div class="img-container">
+                <img src="img/slide-1.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Hoa đẹp mùa xuân</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-2.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Phong cảnh thiên nhiên mùa xuân vùng núi</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-3.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Quang cảnh hừng đông mùa hạ</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-4.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Quang cảnh miền núi mùa hạ</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-5.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Lá đỏ mùa thu</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-6.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Cảnh sắc thu hạ giao nhau</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-7.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Sông mùa đông</p>
+            </div>
+            <div class="img-container">
+                <img src="img/slide-8.jpg" alt="Nature photo">
+                <p class="caption slider-hide">Mùa tuyết trắng</p>
+            </div>
+        </div>
+    </div>
+    <section class="goods-section">
+        <div value="0" class="goods-cart">
+            <button class="goods-cart--img">
+                <ion-icon name="cart-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="goods-container">
+            <div class="goods-individual">
+                <img src="img/goods/iphone9.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Iphone 9</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 700</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods-individual">
+                <img src="img/goods/samsung.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Samsung</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 400</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods-individual">
+                <img src="img/goods/nokia.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Nokia</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 50</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods-individual">
+                <img src="img/goods/sonyXperia.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Sony Xperia</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 450</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods-individual">
+                <img src="img/goods/motorola.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Motorola</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 180</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods-individual">
+                <img src="img/goods/oppo.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Oppo</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 600</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goods-individual">
+                <img src="img/goods/bphone.jpg" alt="Iphone 9" class="goods-img">
+                <div class="goods-content">
+                    <p class="goods-title">Bphone</p>
+                    <ul class="goods-attributes">
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="flame-outline"></ion-icon>
+                            <span class="goods-price"><strong>Đơn giá:</strong> 90</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="star-outline"></ion-icon>
+                            <span class="goods-limit"><strong>Số lượng:</strong> 100</span>
+                        </li>
+                        <li class="goods-attribute">
+                            <ion-icon class="goods-icon" name="restaurant-outline"></ion-icon>
+                            <input type="number" class="goods-quantity" min="0">
+                        </li>
+                        <li class="goods-attribute">
+                            <button class="goods-prompt" type="button">Thêm vào giỏ</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="cart-container">
+        <div class="cart-main">
+
+        </div>
+    </section> -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script src="js/tonghop.js" type="text/javascript"></script>
+</body>
+
+</html>

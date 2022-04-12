@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.header {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.header-text {
+  font-size: 3.2rem;
+  color: lightsalmon;
+}
+
+.table-main {
+  margin: 1rem auto;
+  width: 90rem;
+}
+
+.table-main tr th,
+.table-main tr td:not(.table-main tr .goods-img) {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.table-main tr th {
+  background-color: khaki;
+  color: azure;
+}
+
+.table-main tr td {
+  background-color: cornsilk;
+  color: lightcoral;
+}
+
+.goods-img {
+    /* display: flex; */
+    width: 8rem;
+    overflow: hidden;
+}
+
+.goods-img img {
+    width: 100%;
+
+}
+
+.goods-name {
+    width: 15%;
+}
+
+.quantity-box {
+    width: 10%;
+}
+
+.quantity {
+  /* width: 50%; */
+  /* outline: none; */
+  /* padding: 0.2rem 0.8rem 0.2rem 0.8rem; */
+  text-align: center;
+}
+
+.btn {
+    border: none;
+    color: beige;
+    background-color: #ff6a33;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ff581a;
+}
+
+.btn:active {
+    background-color: #ff4500;
+}
+
+.quantity:focus {
+  box-shadow: 0 0 2px 2px tan;
+  transition: all 0.3s;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.table-main .result .sum-text,
+.table-main .result .sum {
+  background-color: darksalmon;
+  color: azure;
+}

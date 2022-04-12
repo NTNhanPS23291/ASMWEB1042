@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-layout {
+  width: 55%;
+  margin: 0 auto;
+  background-color: rgba(255, 127, 80, 0.404);
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.heading-title {
+  font-size: 2.6rem;
+  text-align: center;
+  padding: 1.6rem 0 0 0;
+  color: #ffffe9;
+}
+
+.heading-content,
+.equation {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffe9;
+}
+
+.heading-content {
+  border-bottom: 2px solid #eee;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.number-container {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.number-text {
+  width: 10rem;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  color: #ffffe9;
+}
+
+.number-input {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  height: 2rem;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  width: 35%;
+}
+
+.number-input::placeholder {
+  color: rgba(255, 127, 80);
+}
+
+.number-input::placeholder:focus {
+  color: rgb(196, 96, 60);
+}
+
+.number-input:focus {
+  box-shadow: 0 0 0 2px #dde3e9;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  column-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin: 2rem auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 90%;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background-color: #e8cdab;
+  box-shadow: 0 0 0 3px #efdcc3;
+  color: #444;
+}
+
+.btn:hover {
+  background-color: #d1b99a;
+}
+
+.btn:active {
+  background-color: #baa489;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.disabled:hover,
+.disabled:active {
+  background-color: #e8cdab;
+}
+
+.result-container {
+  width: 70%;
+  padding: 1rem;
+  background-color: #fff6e9d7;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+  margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.result-text {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.result-number {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.date {
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: italic;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: #333;
+}

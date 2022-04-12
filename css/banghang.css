@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.header {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.header-text {
+  font-size: 3.2rem;
+  color: lightsalmon;
+}
+
+.table-main {
+  margin: 1rem auto;
+}
+
+.table-main tr th,
+.table-main tr td {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.table-main tr th {
+  background-color: khaki;
+  color: azure;
+}
+
+.table-main tr td {
+  background-color: cornsilk;
+  color: lightcoral;
+}
+
+.quantity {
+  width: 60%;
+  outline: none;
+  border: 1px solid crimson;
+  border-radius: 5px;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  text-align: center;
+}
+
+.quantity:focus {
+  box-shadow: 0 0 2px 2px tan;
+  transition: all 0.3s;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.table-main .result .sum-text,
+.table-main .result .sum {
+  background-color: darksalmon;
+  color: azure;
+}

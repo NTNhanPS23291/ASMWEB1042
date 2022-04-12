@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/PTBac2.css">
+    <title>Quadratic Equation</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <form action="#" class="form-layout">
+                <div class="form-content">
+                    <h3 class="heading-title">
+                        GIẢI PHƯƠNG TRÌNH
+                    </h3>
+                    <p class="equation"></p>
+                    <p class="heading-content"></p>
+                    <div class="number-container">
+                        <label class="number-text" for="ni1">Nhập số a:</label>
+                        <input class="number-input number-input-1" data-input="1" type="text"
+                            placeholder="Nhập số từ 0-10" required id="ni1">
+                    </div>
+                    <div class="number-container">
+                        <label class="number-text" for="ni2">Nhập số b:</label>
+                        <input class="number-input number-input-2" data-input="2" type="text"
+                            placeholder="Nhập số từ 0-10" required id="ni2">
+                    </div>
+                    <div class="number-container">
+                        <label class="number-text" for="ni3">Nhập số c:</label>
+                        <input class="number-input number-input-3" data-input="3" type="text"
+                            placeholder="Nhập số từ 0-10" required id="ni3">
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn solve disabled" type="button" disabled>giải pt</button>
+                        <button class="btn insert" type="button">cho số</button>
+                    </div>
+                    <div class="result-container hide"></div>
+                    <p class="date"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/PTBac2.js"></script>
+</body>
+
+</html>
