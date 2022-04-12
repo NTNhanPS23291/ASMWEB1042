@@ -68,8 +68,7 @@ function scrollToShop() {
 shopping.addEventListener('click', scrollToShop);
 
 moveToCartPage.addEventListener('click', () => {
-    console.log(window.location.href);
-    // window.open('./giohang.html', '_blank');
+    window.open(`${window.location.href}giohang.html`, '_blank');
 });
 
 goodsContainer.addEventListener('input', function (e) {
