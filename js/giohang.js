@@ -140,7 +140,7 @@ window.addEventListener('load', e => {
 
 
 window.addEventListener('storage', e => {
-    if (e.url.match(/(tonghop.html)/g) === null) return;
+    if (e.url.match(/(index.html)/g) === null) return;
     const savedSession = window.opener.sessionStorage.getItem('cart');
     const cart = JSON.parse(savedSession);
     fillContent(cart);
