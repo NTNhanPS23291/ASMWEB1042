@@ -122,6 +122,7 @@ goodsContainer.addEventListener('click', e => {
 });
 
 window.addEventListener('storage', e => {
+    console.log(e.url);
     if (e.url.match(/(giohang.html)/g) === null) return;
     const changedSession = sessionStorage.getItem('cart');
     const newCart = JSON.parse(changedSession);

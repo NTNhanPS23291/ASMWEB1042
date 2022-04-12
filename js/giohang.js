@@ -140,6 +140,7 @@ window.addEventListener('load', e => {
 
 
 window.addEventListener('storage', e => {
+    console.log(e.url);
     if (e.url.match(/(index.html)/g) === null) return;
     const savedSession = window.opener.sessionStorage.getItem('cart');
     const cart = JSON.parse(savedSession);
