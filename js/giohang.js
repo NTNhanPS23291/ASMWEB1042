@@ -140,7 +140,9 @@ window.addEventListener('load', e => {
 
 
 window.addEventListener('storage', e => {
-    if (e.url.match(/(ASMWEB1042)/g) === null) return;
+    const matchUrl1 = e.url.match(/(ASMWEB1042)/g) === null;
+    const matchUrl2 = e.url.match(/(index.html)/g) === null;
+    if(!matchUrl1 && !matchUrl2) return;
     const savedSession = window.opener.sessionStorage.getItem('cart');
     const cart = JSON.parse(savedSession);
     fillContent(cart);
