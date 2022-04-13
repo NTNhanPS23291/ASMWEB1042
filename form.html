@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dfbcd3590d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
+
     <title>Form - Nguyễn Thiện Nhân - PS23291</title>
 </head>
 
@@ -16,60 +18,76 @@
                 <h3 class="heading">đăng ký thành viên</h3>
                 <div class="form">
                     <div class="info-container">
-                        <label class="info" for="msv">Mã sinh viên</label>
-                        <input class="input" type="text">
+                        <label class="info">Mã sinh viên</label>
+                        <input class="input" name="signupCode" type="text" required maxlength="7">
+                        <p class="error hide">Hãy nhập mã sinh viên gồm 7 ký tự</p>
                     </div>
                     <div class="info-container">
-                        <label class="info" for="msv">Họ và tên</label>
-                        <input name="signupName" class="input" type="text">
+                        <label class="info">Họ và tên</label>
+                        <input name="signupName" class="input" type="text" required minlength="2" maxlength="30">
+                        <p class="error hide">Nhập tên từ 2 đến 30 ký tự</p>
                     </div>
                     <div class="info-container">
-                        <label class="info" for="msv">Email</label>
-                        <input class="input" type="email">
+                        <label class="info">Email</label>
+                        <input class="input" name="signupEmail" type="email" required>
+                        <p class="error hide">Hãy nhập email của bạn</p>
                     </div>
                     <div class="info-container">
-                        <label class="info" for="msv">Giới tính</label>
+                        <label class="info">Giới tính</label>
                         <div class="input choice-box">
-                            <input class="choice" type="radio" name="gender" id="male"><label class="choice"
+                            <input class="choice" value="nam" type="radio" name="gender" id="male"><label class="choice"
                                 for="male">Nam</label>
-                            <input class="choice" type="radio" name="gender" id="female"><label class="choice"
+                            <input class="choice" value="nu" type="radio" name="gender" id="female"><label class="choice"
                                 for="female">Nữ</label>
                         </div>
+                        <p class="error hide">Giới tính của bạn là gì</p>
                     </div>
                     <div class="info-container">
-                        <label class="info" for="msv">Sở thích</label>
+                        <label class="info">Sở thích</label>
                         <div class="input choice-box">
-                            <input class="choice" type="checkbox" name="hobby" id="male"><label class="choice"
-                                for="male">Đọc sách</label>
-                            <input class="choice" type="checkbox" name="hobby" id="female"><label class="choice"
-                                for="female">Du lịch</label>
-                            <input class="choice" type="checkbox" name="hobby" id="male"><label class="choice"
-                                for="male">Ẩm
-                                thực</label>
-                            <input class="choice" type="checkbox" name="hobby" id="female"><label class="choice"
-                                for="female">Âm nhạc</label>
-                            <input class="choice" type="checkbox" name="hobby" id="female"><label class="choice"
-                                for="female">Khác</label>
+                            <input class="choice" value="1" type="checkbox" name="hobby" id="book"><label class="choice"
+                                for="book">Đọc sách</label>
+                            <input class="choice" value="2" type="checkbox" name="hobby" id="travel"><label class="choice"
+                                for="travel">Du lịch</label>
+                            <input class="choice" value="3" type="checkbox" name="hobby" id="food"><label class="choice"
+                                for="food">Ẩm thực</label>
+                            <input class="choice" value="4" type="checkbox" name="hobby" id="music"><label class="choice"
+                                for="music">Âm nhạc</label>
+                            <input class="choice" value="5" type="checkbox" name="hobby" id="others"><label class="choice"
+                                for="others">Khác</label>
                         </div>
+                        <p class="error hide">Hãy chọn ít nhất 1 sở thích</p>
                     </div>
                     <div class="info-container">
-                        <label class="info" for="msv">Quốc tịch</label>
-                        <select class="input choice-box">
+                        <label class="info">Quốc tịch</label>
+                        <select class="input choice-box" name="signupNation">
                             <option value="0">Chọn quốc tịch</option>
+                            <option value="1">Mỹ</option>
+                            <option value="2">Nhật Bản</option>
+                            <option value="3">Việt Nam</option>
                         </select>
+                        <p class="error hide">Quốc tịch của bạn là gì?</p>
                     </div>
                     <div class="info-container">
-                        <label class="info" for="msv">Ghi chú</label>
-                        <textarea class="input" type="text"></textarea>
+                        <label class="info">Ghi chú</label>
+                        <textarea class="input" name="description" type="text"></textarea>
+                        <p class="error hide">Tối đa chỉ được 500 ký tự</p>
                     </div>
                     <div class="btn-box">
-                        <button class="btn" type="button">Đăng kí</button>
+                        <button class="btn" type="submit" onclick="event.preventDefault(); formCheck();">Đăng kí</button>
                     </div>
                 </div>
             </form>
         </div>
+        <div class="popup-container hide">
+            <div class="popup-correct">
+                <i class="fa-regular fa-circle-check"></i>
+                <h3 class="popup-correct-header">Đã ghi nhận thông tin !</h3>
+                <button class="popup-correct-btn" type="button">Xác nhận</button>
+            </div>
+        </div>
     </div>
-    <script src="js/form.js" type="text/javascript"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>
